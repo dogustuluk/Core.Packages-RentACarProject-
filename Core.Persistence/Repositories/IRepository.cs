@@ -1,4 +1,5 @@
-﻿using Core.Persistence.Paging;
+﻿using Core.Persistence.Dynamic;
+using Core.Persistence.Paging;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
@@ -59,7 +60,7 @@ public interface IRepository<TEntity, TEntityId>: IQueryable<TEntity>
 
 	ICollection<TEntity> AddRangeAsync(ICollection<TEntity> entity);
 
-	TEntity>UpdateAsync(TEntity entity);
+	TEntity UpdateAsync(TEntity entity);
 
 	ICollection<TEntity> UpdateRangeAsync(ICollection<TEntity> entity);
 
